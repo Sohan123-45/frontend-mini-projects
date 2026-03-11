@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,500&display=swap');
+</style>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 20px;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:"wdth" 100;
+        }
+        .clock>.dot{
+            margin: 2px;
+            color: white;
+        }
+        .clock>.time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 2px;
+            color: white;
+            font-size: 50px;
+            border-radius: 5px;
+        }
+        .clock>.time>.indication{
+            font-size: 10px;
+            color: gray;
+        }
+        .clock>.date{
+            color: white;
+            padding: 3px 15px;
+            background-color: gray;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="date"></div>
+        <div class="time">
+            <div class="day"></div>
+            <div class="indication">DAY</div>
+        </div>
+        <div class="dot">:</div>
+        <div class="time">
+            <div class="hour"></div>
+            <div class="indication">HOURS</div>
+        </div>
+        <div class="dot">:</div>
+        <div class="time">
+            <div class="minute"></div>
+            <div class="indication">MINUTES</div>
+        </div>
+        <div class="dot">:</div>
+        <div class="time">
+            <div class="second"></div>
+            <div class="indication">SECONDS</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

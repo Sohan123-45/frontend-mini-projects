@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            padding: 20px 10px;
+            border-radius: 25px;
+            background-color: rgb(230, 230, 230);
+            font-weight: 600;
+            opacity: 0.5;
+        }
+        .change{
+            width: 150px;
+            height: 80px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            filter: opacity(0.5);
+            font-weight: 600;
+        }
+        .change:hover{
+            transition: transform 0.20s ease-out;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Changing Button</h1>
+    <button class="change">Change</button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .hook{
+            background-color: rgb(39,37,40);
+            width: 30px;
+            height: 30px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hook>div{
+            height: 23px;
+            margin: 2px;
+            width: 5px;
+            background-color: rgb(96,73,74);
+            filter: blur(1px);
+        }
+        .stopwatch{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-direction: column;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background-color: rgb(241, 241, 241);
+            border: 15px solid rgb(213,147,98);
+        }
+        .stopwatch>.display{
+            background-color: rgb(255, 250, 237);
+            padding: 4px 8px;
+            border-radius: 50px;
+            margin-top: 45px;
+            font-size: 50px;
+        }
+        .stopwatch>.operation{
+            display: flex;
+            column-gap: 6px;
+        }
+        .stopwatch>.operation>button{
+            cursor: pointer;
+            border: 1px solid gray;
+            padding: 8px 15px;
+            border-radius: 18px;
+            background-color: rgb(77, 91, 82);
+            color: white;
+        }
+        .stopwatch>.operation>button:hover{
+            filter: opacity(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="hook">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="stopwatch">
+        <div class="display">00:00:00</div>
+        <div class="operation">
+            <button class="start">Start</button>
+            <button class="pause">Pause</button>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

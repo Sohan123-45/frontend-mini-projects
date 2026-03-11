@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f1f1;
+}
+.calculator{
+    width: 150px;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: rgb(58, 58, 58);
+    border-radius: 5px;
+}
+.output{
+    padding-left: 7px;
+    margin: 3px;
+    width: 131px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: lightgray;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.operators{
+    display: flex;
+}
+.operators>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(90, 90, 90);
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    background-color: yellow;
+    padding: 5px;
+    margin: 3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+}
+.numbers>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    margin: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.operators>div:hover,.numbers>div:hover {
+    opacity: 0.8;
+}
+.numbers>.equal,.numbers>.clear{
+    background-color: rgb(233, 151, 0);
+    font-weight: 600;
+}

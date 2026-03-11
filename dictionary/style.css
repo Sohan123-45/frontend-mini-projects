@@ -1,0 +1,201 @@
+/* =========================
+   CSS VARIABLES (LIGHT)
+   ========================= */
+:root {
+    --bg: #f8f7f4;
+    --paper: #ffffff;
+    --text: #1f1f1f;
+    --muted: #555;
+    --border: #d9d9d9;
+    --accent: #8b0000; /* dictionary red */
+    --button-bg: #1f1f1f;
+    --button-text: #ffffff;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --paper: #1b1b1b;
+        --text: #e8e8e8;
+        --muted: #aaaaaa;
+        --border: #333;
+        --accent: #e63946;
+        --button-bg: #e8e8e8;
+        --button-text: #121212;
+    }
+}
+
+/* =========================
+   RESET
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+/* =========================
+   DICTIONARY CONTAINER
+   ========================= */
+.dict {
+    max-width: 650px;
+    margin: auto;
+    background-color: var(--paper);
+    padding: 35px 40px;
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+.search {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    outline: none;
+}
+
+.search input::placeholder {
+    color: var(--muted);
+}
+
+.search button {
+    padding: 10px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+}
+.search button:hover{
+    background-color: #e8e8e8bd;
+    transform: translateY(-2px);
+}
+.search button:active{
+    transform: scale(0.97);
+}
+
+/* =========================
+   WORD HEADER
+   ========================= */
+.word-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+/* Phonetic text */
+.phonetic {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+}
+
+.meaning h2 {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Pronunciation button */
+.meaning button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+.meaning button:hover{
+    color: #8b0000ac;
+    transform: translateY(-2px);
+}
+.meaning button:active{
+    transform: scale(0.97);
+}
+
+/* =========================
+   DEFINITIONS
+   ========================= */
+.meaning ul {
+    list-style: none;
+    margin-top: 22px;
+}
+
+.meaning li {
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+/* Part of speech (Oxford style emphasis) */
+.meaning li::first-letter {
+    text-transform: uppercase;
+}
+
+/* =========================
+   SYNONYMS / ANTONYMS
+   ========================= */
+.meaning h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+}
+
+.meaning p {
+    margin-left: 12px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* =========================
+   SEPARATION
+   ========================= */
+.meaning ul > li {
+    padding-bottom: 6px;
+    border-bottom: 1px dotted var(--border);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 480px) {
+    .dict {
+        padding: 25px 22px;
+    }
+
+    .meaning h2 {
+        font-size: 24px;
+    }
+}
